@@ -23,7 +23,7 @@ wget https://github.com/david-jablonski/w205/blob/master/exercise_1/loading_and_
 wget https://github.com/david-jablonski/w205/blob/master/exercise_1/loading_and_modelling/import_hospital_files/Readmissions%20and%20Deaths%20-%20Hospital.csv
 wget https://github.com/david-jablonski/w205/blob/master/exercise_1/loading_and_modelling/import_hospital_files/Readmissions%20and%20Deaths%20-%20State.csv
 
-#Putting the files in /user/w205/hospital_compare
+#Stripping the top line and putting the files in /user/w205/hospital_compare
 tail -n +2 '/home/w205/Hospital General Information.csv' > /home/w205/hospital_info.csv
 tail -n +2 '/home/w205/Measure Dates.csv' > /home/w205/measures.csv
 tail -n +2 '/home/w205/hvbp_hcahps_05_28_2015.csv' > /home/w205/surveys.csv
