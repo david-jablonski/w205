@@ -38,20 +38,36 @@ tail -n +2 '/home/w205/Outpatient Imaging Efficiency - State.csv' > /home/w205/i
 tail -n +2 '/home/w205/Readmissions and Deaths - Hospital.csv' > /home/w205/readmissions_h.csv
 tail -n +2 '/home/w205/Readmissions and Deaths - State.csv' > /home/w205/readmissions_s.csv
 
-#Putting the files in /user/w205/hospital_compare
-hdfs dfs -put hospital_info.csv /user/w205/hospital_compare
-hdfs dfs -put measures.csv /user/w205/hospital_compare
-hdfs dfs -put surveys.csv /user/w205/hospital_compare
-hdfs dfs -put effective_care_h.csv /user/w205/hospital_compare
-hdfs dfs -put effective_care_s.csv /user/w205/hospital_compare
-hdfs dfs -put complications_h.csv /user/w205/hospital_compare
-hdfs dfs -put complications_s.csv /user/w205/hospital_compare
-hdfs dfs -put infections_h.csv /user/w205/hospital_compare
-hdfs dfs -put infections_s.csv /user/w205/hospital_compare
-hdfs dfs -put imaging_h.csv /user/w205/hospital_compare
-hdfs dfs -put imaging_s.csv /user/w205/hospital_compare
-hdfs dfs -put readmissions_h.csv /user/w205/hospital_compare
-hdfs dfs -put readmissions_s.csv /user/w205/hospital_compare
+#Creating the directories in /user/w205/hospital_compare
+hdfs dfs -mkdir /user/w205/hospital_compare/hospital_info
+hdfs dfs -mkdir /user/w205/hospital_compare/measures
+hdfs dfs -mkdir /user/w205/hospital_compare/surveys
+hdfs dfs -mkdir /user/w205/hospital_compare/effective_care_h
+hdfs dfs -mkdir /user/w205/hospital_compare/effective_care_s
+hdfs dfs -mkdir /user/w205/hospital_compare/complications_h
+hdfs dfs -mkdir /user/w205/hospital_compare/complications_s
+hdfs dfs -mkdir /user/w205/hospital_compare/infections_h
+hdfs dfs -mkdir /user/w205/hospital_compare/infections_s
+hdfs dfs -mkdir /user/w205/hospital_compare/imaging_h
+hdfs dfs -mkdir /user/w205/hospital_compare/imaging_s
+hdfs dfs -mkdir /user/w205/hospital_compare/readmissions_h
+hdfs dfs -mkdir /user/w205/hospital_compare/readmissions_s
+
+#Putting the files in there specific folders
+hdfs dfs -put hospital_info.csv /user/w205/hospital_compare/hospital_info
+hdfs dfs -put measures.csv /user/w205/hospital_compare/measures
+hdfs dfs -put surveys.csv /user/w205/hospital_compare/surveys
+hdfs dfs -put effective_care_h.csv /user/w205/hospital_compare/effective_care_h
+hdfs dfs -put effective_care_s.csv /user/w205/hospital_compare/effective_care_s
+hdfs dfs -put complications_h.csv /user/w205/hospital_compare/complications_h
+hdfs dfs -put complications_s.csv /user/w205/hospital_compare/complications_s
+hdfs dfs -put infections_h.csv /user/w205/hospital_compare/infections_h
+hdfs dfs -put infections_s.csv /user/w205/hospital_compare/infections_s
+hdfs dfs -put imaging_h.csv /user/w205/hospital_compare/imaging_h
+hdfs dfs -put imaging_s.csv /user/w205/hospital_compare/imaging_s
+hdfs dfs -put readmissions_h.csv /user/w205/hospital_compare/readmissions_h
+hdfs dfs -put readmissions_s.csv /user/w205/hospital_compare/readmissions_s
+
 
 
 
