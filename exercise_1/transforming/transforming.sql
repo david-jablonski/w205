@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 --CREATING TABLE FOR HOSPITAL INFORMATION
 CREATE EXTERNAL TABLE hospital_info (provider_id STRING, hospital_name STRING, address STRING, city STRING, state STRING, 
                                      zip_code STRING, county_name STRING, phone_number STRING, hospital_type STRING, 
