@@ -12,6 +12,7 @@ STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/hospital_info'; 
 
 
+
 --CREATING TABLE FOR Measures info
 CREATE EXTERNAL TABLE measures (measure_name STRING, measure_id STRING, measure_start_quater STRING, measure_start_date STRING, 
                                      measure_end_quarter STRING, measure_end_date STRING)  
@@ -189,3 +190,19 @@ WITH SERDEPROPERTIES (
 ) 
 STORED AS TEXTFILE 
 LOCATION '/user/w205/hospital_compare/readmissions_s'; 
+
+
+--Load data into tables
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/hospital_info/hospital_info.csv' INTO TABLE hospital_info;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/measures/measures.csv' INTO TABLE measures;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/surveys/surveys.csv' INTO TABLE surveys;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/effective_care_h/effective_care_h.csv' INTO TABLE effective_care_h;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/effective_care_s/effective_care_s.csv' INTO TABLE effective_care_s;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/complications_h/complications_h.csv' INTO TABLE complications_h;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/complications_s/complications_s.csv' INTO TABLE complications_s;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/infections_h/infections_h.csv' INTO TABLE infections_h;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/infections_s/infections_s.csv' INTO TABLE infections_s;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/imaging_h/imaging_h.csv' INTO TABLE imaging_h;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/imaging_s/imaging_s.csv' INTO TABLE imaging_s;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/readmissions_h/readmissions_h.csv' INTO TABLE readmissions_h;
+LOAD DATA INPATH 'hdfs://user/w205/hospital_compare/readmissions_s/readmissions_s.csv' INTO TABLE readmissions_s;
