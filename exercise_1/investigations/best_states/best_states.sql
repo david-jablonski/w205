@@ -1,0 +1,1 @@
+--SQL file to get the 10 best states
