@@ -2,6 +2,6 @@
 
 select *, VARIANCE(score_num) as variance_score 
 from effective_care_s_4
-group by provider_id
+group by measure_id
 order by VARIANCE(score_num) desc
 limit 10;
