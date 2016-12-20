@@ -1,4 +1,4 @@
---SQL file for the top 100 hosiptal variability
+--SQL file for the top 10 most variability among procedures in the different hospitals
 
 select *, VARIANCE(score_num) as variance_score 
 from effective_care_s_4
