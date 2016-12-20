@@ -1,5 +1,4 @@
---SQL file to get the 10 best hospitals
---Transforming TABLE FOR effective_care_h
+--SQL file to create a table to get the 10 best hospitals
 
 CREATE TABLE best_hospitals 
 as select *, SUM(score_num) as total_score 
