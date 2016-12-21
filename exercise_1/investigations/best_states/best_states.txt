@@ -1,4 +1,5 @@
-
+Similar to the best hospital calculation, the best state aggregate score comes from all of the different procedures for each state.
+The top 10 states and scores are as follows.
 
 DC      8170.0
 MD      7831.0
