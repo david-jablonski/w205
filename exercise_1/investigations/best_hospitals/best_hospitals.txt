@@ -1,3 +1,6 @@
+To calculate the best hospitals the aggregate score from all of the different procedures for each hospital were used.
+The top 10 hospitals and scores are as follows.
+
 330202  KINGS COUNTY HOSPITAL CENTER                5051.0
 330101  NEW YORK-PRESBYTERIAN HOSPITAL              4807.0
 450289  HARRIS HEALTH SYSTEM                        4725.0
