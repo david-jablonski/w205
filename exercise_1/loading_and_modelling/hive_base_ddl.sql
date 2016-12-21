@@ -48,7 +48,7 @@ LOCATION '/user/w205/hospital_compare/surveys';
 --CREATING TABLE FOR effective_care_h
 CREATE EXTERNAL TABLE effective_care_h (provider_id STRING, hospital_name STRING, address STRING, city STRING, state STRING, 
                                      zip_code STRING, county_name STRING, phone_number STRING, condtion STRING, 
-                                     measure_id STRING, score STRING, sample STRING, footnote STRING, 
+                                     measure_id STRING, measure_name STRING, score STRING, sample STRING, footnote STRING, 
                                      measure_start_date STRING, measure_end_date STRING)  
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde' 
 WITH SERDEPROPERTIES ( 
