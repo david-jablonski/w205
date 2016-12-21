@@ -1,3 +1,4 @@
 Correlation between the patient surveys and the effective care of hosiptals was -0.4774893277970262
 This represents a moderate downhill (negative) relationship between these factors.  
-This result was not entirely expected but there has been recent studies that have shown that just trying to please the patient can actually have negative effects on their health.
+This result was not entirely expected but there has been recent studies that have shown that just 
+trying to please the patient can actually have negative effects on their health.
