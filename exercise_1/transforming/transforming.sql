@@ -1,6 +1,8 @@
 --CREATING TABLE FOR surveys
-CREATE TABLE surveys_2 as select provider_number, hospital_name, hcahps_base_score, hcahps_consistency_score from surveys;
-
+CREATE TABLE surveys_2 as select provider_id, hospital_name, hcahps_base_score, hcahps_consistency_score from surveys;
+CREATE TABLE surveys_3 as select *, regexp_extract(hcahps_base_score, '[0-9]+', 0) as score_1 from surveys_2;
+CREATE TABLE surveys_4 as select *, regexp_extract(hcahps_consistency_score, '[0-9]+', 0) as score_2 from surveys_3;
+CREATE TABLE surveys_5 as select *, score_1 + score_2 as score_total from surveys_4;
 
 --Transforming TABLE FOR effective_care_h
 CREATE TABLE effective_care_h_2 as select provider_id, hospital_name, measure_id, score from effective_care_h;
