@@ -1,3 +1,24 @@
+--CREATING TABLE FOR surveys
+CREATE TABLE surveys_2 as select provider_number, hospital_name, measure_id, hcahps_base_score, hcahps_consistency_score from surveys;
+CREATE EXTERNAL TABLE surveys (provider_number STRING, hospital_name STRING, address STRING, city STRING, state STRING, 
+                               zip_code STRING, county_name STRING, cnap STRING, cnip STRING, cnds STRING,
+                               cdap STRING, cdip STRING, cdds STRING, rhsap STRING, rhsip STRING, rhsds STRING,
+                               pmap STRING, pmip STRING, pmds STRING, cqheap STRING, cqheip STRING, cqheds STRING,
+                               diap STRING, diip STRING, dids STRING, orhap STRING, orhip STRING, orhds STRING,
+                               measure_id STRING, score STRING, sample STRING, 
+                               hcahps_base_score STRING, hcahps_consistency_score STRING)  
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde' 
+WITH SERDEPROPERTIES ( 
+   "separatorChar" = ",", 
+   "quoteChar"     = '"', 
+   "escapeChar"    = '\\' 
+) 
+STORED AS TEXTFILE 
+LOCATION '/user/w205/hospital_compare/surveys'; 
+
+
+
+
 --Transforming TABLE FOR effective_care_h
 CREATE TABLE effective_care_h_2 as select provider_id, hospital_name, measure_id, score from effective_care_h;
 CREATE TABLE effective_care_h_3 as select *, regexp_extract(score, '[0-9]+', 0) as score_num from effective_care_h_2;
