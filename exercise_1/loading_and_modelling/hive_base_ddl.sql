@@ -28,7 +28,7 @@ LOCATION '/user/w205/hospital_compare/measures';
 
 
 --CREATING TABLE FOR surveys
-CREATE EXTERNAL TABLE surveys (provider_number STRING, hospital_name STRING, address STRING, city STRING, state STRING, 
+CREATE EXTERNAL TABLE surveys (provider_id STRING, hospital_name STRING, address STRING, city STRING, state STRING, 
                                zip_code STRING, county_name STRING, cnap STRING, cnip STRING, cnds STRING,
                                cdap STRING, cdip STRING, cdds STRING, rhsap STRING, rhsip STRING, rhsds STRING,
                                pmap STRING, pmip STRING, pmds STRING, cqheap STRING, cqheip STRING, cqheds STRING,
