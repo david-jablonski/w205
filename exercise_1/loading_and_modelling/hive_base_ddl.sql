@@ -33,7 +33,7 @@ CREATE EXTERNAL TABLE surveys (provider_number STRING, hospital_name STRING, add
                                cdap STRING, cdip STRING, cdds STRING, rhsap STRING, rhsip STRING, rhsds STRING,
                                pmap STRING, pmip STRING, pmds STRING, cqheap STRING, cqheip STRING, cqheds STRING,
                                diap STRING, diip STRING, dids STRING, orhap STRING, orhip STRING, orhds STRING,
-                               measure_id STRING, score STRING, sample STRING, footnote STRING, 
+                               achievement_points STRING, improvement_points STRING, dimension_score STRING,
                                hcahps_base_score STRING, hcahps_consistency_score STRING)  
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde' 
 WITH SERDEPROPERTIES ( 
