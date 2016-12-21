@@ -1,8 +1,11 @@
 --SQL file to create a table to get the 10 best states
 
 CREATE TABLE best_states
-as select *, SUM(score_num) as state_score 
+as select state, SUM(score_num) as state_score 
 from effective_care_s_4
 group by state
-order by SUM(score_num) desc
+order by state_score desc
 limit 10;
+
+--To print chart for report
+select * from best_states;
