@@ -1,3 +1,6 @@
+The scores from all the hospitals were used to calculate the variance for each procedure.
+The top 10 procedures that have the highest variance are as follows.
+
 ED_1b   8010.8736345803145
 ED_2b   3560.107401663113
 OP_18b  1656.5529409803205
